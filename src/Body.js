@@ -22,7 +22,7 @@ class Body extends Component {
     }
   }
   componentDidMount() {
-    fetch('http://localhost:8080/individuals') 
+    fetch('http://localhost:8080/species') 
       .then(response => response.json())
       .then(data => this.setState({ posts: data }));
   }
@@ -37,7 +37,11 @@ class Body extends Component {
                 <img className="card-img-top" src={post.image_url} alt={post.name} />
                 <div className="card-body">
                   <h5 className="card-title">{post.name}</h5>
-                  <p className="card-text">{post.species_name}</p>
+                  <div className="card-title"><b>Scientific Name: </b> {post.scientific_name} </div>
+                  <div className="card-title"> <b>Conservation Status: </b> {post.conservation_status} </div>
+
+
+                  <p className="card-text">{post.description}</p>
                 </div>
               </div>
             </div>
