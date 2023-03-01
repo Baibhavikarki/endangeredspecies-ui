@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM  from "react-dom/client";
+import Home from "./Home";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Greeting(){
-    return <h2> My first component</h2>
-}
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<Greeting/>);
+root.render(<Home />);
