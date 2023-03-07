@@ -22,7 +22,7 @@ class Body extends Component {
     }
   }
   componentDidMount() {
-    fetch('http://localhost:8080/species') 
+    fetch('https://endangered-species-api.herokuapp.com/species') 
       .then(response => response.json())
       .then(data => this.setState({ posts: data }));
   }
